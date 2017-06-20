@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     
     var highScoreText = [1: "test"]
     
-    @IBAction func scoreIncreace(button: UIButton) {
+    @IBAction func scoreIncrease(button: UIButton) {
         if timerOn == false {
             score += 1
             scoreLabel.text = "\(score)"
