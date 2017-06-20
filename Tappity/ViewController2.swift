@@ -21,6 +21,8 @@ class ViewController2: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //Merge me
+    
     @IBOutlet weak var scoreOne: UILabel!
     @IBOutlet weak var scoreTwo: UILabel!
     @IBOutlet weak var scoreThree: UILabel!
