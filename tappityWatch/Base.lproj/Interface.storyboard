@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller contentMode="topRight" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="tappityWatch" customModuleProvider="target">
+                    <items>
+                        <label alignment="right" hidden="YES" text="Score" textAlignment="center" baselineAdjustment="alignCenters" id="QAD-Yi-wo0"/>
+                        <group width="1" alignment="left" id="rZu-Ic-kpy">
+                            <items>
+                                <label alignment="left" text="Time" textAlignment="center" baselineAdjustment="alignCenters" id="C1n-FA-5Li"/>
+                                <label alignment="right" text="Score" textAlignment="center" baselineAdjustment="alignCenters" id="Qig-Oo-aaV"/>
+                            </items>
+                        </group>
+                        <group width="134" alignment="left" id="3MX-i1-TJa">
+                            <items>
+                                <label alignment="left" text="30" id="kTW-nY-dzk"/>
+                                <label alignment="right" text="0" id="Sdc-YF-gZp"/>
+                            </items>
+                        </group>
+                        <button width="229" height="103" alignment="left" title="Tap Me" id="oWk-Jk-Urr">
+                            <connections>
+                                <action selector="tapButton" destination="AgC-eL-Hgc" id="C3w-R8-Gls"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="scoreLabel" destination="Sdc-YF-gZp" id="ulL-6g-h13"/>
+                        <outlet property="timeLabel" destination="kTW-nY-dzk" id="Zod-0l-YRd"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="tappityWatch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
